@@ -5,6 +5,7 @@
 // #else
 //  #include "WProgram.h"
 // #endif
+#include "application.h"
 
 /* DHT library 
 
@@ -25,7 +26,7 @@ class DHT {
   int data[6];
   int _pin, _type, _count;
   unsigned long _lastreadtime;
-  boolean firstreading;
+  bool firstreading;
 
  public:
   DHT(int pin, int type, int count=6);
@@ -34,7 +35,7 @@ class DHT {
   float convertCtoF(float);
   float computeHeatIndex(float tempFahrenheit, float percentHumidity);
   float readHumidity(void);
-  boolean read(void);
+  bool read(void);
 
 };
 #endif

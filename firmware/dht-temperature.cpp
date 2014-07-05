@@ -10,7 +10,7 @@ DHT::DHT(int pin, int type, int count) {
   _pin = pin;
   _type = type;
   _count = count;
-  firstreading = true;
+  bool firstreading = true;
 }
 
 void DHT::begin(void) {
@@ -20,7 +20,7 @@ void DHT::begin(void) {
   _lastreadtime = 0;
 }
 
-//boolean S == Scale.  True == Farenheit; False == Celcius
+//bool S == Scale.  True == Farenheit; False == Celcius
 float DHT::readTemperature(bool S) {
   float f;
 
@@ -46,7 +46,7 @@ float DHT::readTemperature(bool S) {
       return f;
     }
   }
-  return NAN;
+  return 0;
 }
 
 float DHT::convertCtoF(float c) {
@@ -69,7 +69,7 @@ float DHT::readHumidity(void) {
       return f;
     }
   }
-  return NAN;
+  return 0;
 }
 
 float DHT::computeHeatIndex(float tempFahrenheit, float percentHumidity) {
@@ -87,7 +87,7 @@ float DHT::computeHeatIndex(float tempFahrenheit, float percentHumidity) {
 }
 
 
-boolean DHT::read(void) {
+bool DHT::read(void) {
   int laststate = HIGH;
   int counter = 0;
   int j = 0, i;
