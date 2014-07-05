@@ -1,0 +1,7 @@
+{
+    "name": "dht-temperature",
+    "version": "0.0.1",
+    "author": "Dean Putney via Lady Ada <deanputney@gmail.com>",
+    "license": "MIT",
+    "description": "For use with DHT11 and DHT22 sensors to sense temperature and humidity"
+}
