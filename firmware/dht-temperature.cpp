@@ -6,7 +6,7 @@ written by Adafruit Industries
 
 #include "dht-temperature.h"
 
-DHT::DHT(uint8_t pin, uint8_t type, uint8_t count) {
+DHT::DHT(int pin, int type, int count) {
   _pin = pin;
   _type = type;
   _count = count;
@@ -88,9 +88,9 @@ float DHT::computeHeatIndex(float tempFahrenheit, float percentHumidity) {
 
 
 boolean DHT::read(void) {
-  uint8_t laststate = HIGH;
-  uint8_t counter = 0;
-  uint8_t j = 0, i;
+  int laststate = HIGH;
+  int counter = 0;
+  int j = 0, i;
   unsigned long currenttime;
 
   // Check if sensor was read less than two seconds ago and return early
