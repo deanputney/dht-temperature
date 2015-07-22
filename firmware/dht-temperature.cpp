@@ -6,6 +6,18 @@ written by Adafruit Industries
 
 #include "dht-temperature.h"
 
+void pow(int e, int b)
+{
+  int t=1;
+  float f=1;
+  while(b>=t)
+  {
+    f=f*e;
+    t++;
+  }
+  return f;
+}
+
 DHT::DHT(int pin, int type, int count) {
   _pin = pin;
   _type = type;
