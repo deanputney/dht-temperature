@@ -6,7 +6,7 @@ written by Adafruit Industries
 
 #include "dht-temperature.h"
 
-void pow(int e, int b)
+float pow(int e, int b)
 {
   int t=1;
   float f=1;
