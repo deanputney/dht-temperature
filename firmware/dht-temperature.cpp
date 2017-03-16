@@ -91,11 +91,11 @@ float DHT::computeHeatIndex(float tempFahrenheit, float percentHumidity) {
            2.04901523 * tempFahrenheit + 
           10.14333127 * percentHumidity +
           -0.22475541 * tempFahrenheit*percentHumidity +
-          -0.00683783 * pow(tempFahrenheit, 2) +
-          -0.05481717 * pow(percentHumidity, 2) + 
-           0.00122874 * pow(tempFahrenheit, 2) * percentHumidity + 
-           0.00085282 * tempFahrenheit*pow(percentHumidity, 2) +
-          -0.00000199 * pow(tempFahrenheit, 2) * pow(percentHumidity, 2);
+          -0.00683783 * pow(tempFahrenheit, 2.0) +
+          -0.05481717 * pow(percentHumidity, 2.0) + 
+           0.00122874 * pow(tempFahrenheit, 2.0) * percentHumidity + 
+           0.00085282 * tempFahrenheit*pow(percentHumidity, 2.0) +
+          -0.00000199 * pow(tempFahrenheit, 2.0) * pow(percentHumidity, 2.0);
 }
 
 
